@@ -11,6 +11,7 @@ text-align: center;
 p {
 background-color: hsl(120,80%,90%); /*lighter lightgreen*/
 padding: 0px 20px;
-text-align; justify;
+text-align: justify;
 }
+
 

@@ -25,7 +25,7 @@ a {
   text-decoration: none;
   font-family: Tahoma, Geneva, sans-serif;}
 a:hover {text-decoration: under;}
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .grid {
     display: grid;
     grid-template-columns: auto;
@@ -50,7 +50,7 @@ a:hover {text-decoration: under;}
   }
   nav > ul > li {padding: 0 6px;}
 }
-@media (min-width: 481px) {
+@media screen and (min-width: 481px) {
   .grid { 
     display: grid;
     column-gap: 20px;

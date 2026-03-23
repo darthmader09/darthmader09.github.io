@@ -16,6 +16,7 @@ nav > ul {
   list-style-type: none;
   font-size: .8em;
 }
+aside {text-align: right}
 .trail-name {font-size: 1.5em; padding: 10px 0;}
 main > div {padding-bottom: 10px;}
 footer {text-align: center; margin-top: 10px;}

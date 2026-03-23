@@ -30,7 +30,7 @@ a:hover {text-decoration: under;}
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 100px auto auto 1fr auto;
-    gird-template-areas:
+    grid-template-areas:
       "banner"
       "header"
       "nav"
@@ -44,7 +44,7 @@ a:hover {text-decoration: under;}
   nav > ul { 
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between
+    justify-content: space-between;
     margin-bottom: 0;
     padding: 0;
   }

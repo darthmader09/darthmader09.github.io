@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Stephen Speer">
+    <title>MPG Calculator</title>
+    <script>
+      function calculateMPG(form) {
+        var error = "";
+        var miles1, miles2;
+        var miles1num, miles2num;
+        var gallons;
+        var mpg;
+
+        miles1 = form.elements["miles1"];
+        miles2 = form.elements["miles2"];
+        gallons = form.elements["gallons"];
+
+        if(!miles.checkValidity()) {
+          error += "First  odometer reading must be between 0 and 400,00 miles. \n";
+        }
+        if(!miles2.checkValidity()) {
+          error += "Second odometer reading must be between 0 and 400,000 miles. \n;
+        }
+        if(miles1.checkValidity() && miles2.checkValidity()) {
+          miles1um = miles1.valuesAsNumber;
+          miles2num = miles2.valueAsNumber;
+          if(miles2num <= miles1num) {
+          error += "Second odometer reading must be greater than the first. \n;
+        }
+      }
+      if(!gallons.checkValidity() {
+        error += "Gallons must be between 0.1 and 40. \n;
+      }
+      if(error === "") {
+        mpg = (miles2num - miles1num) / gallon.valueAsNumber;
+        document.getElementById("mpg").value = mpg.toFixed(1);
+      }
+      else {
+        document.getElementById("mpg").value = "";
+        alert(error.substring(0, error.length - 2));
+      }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Miles Per Gallon Calculator</h2>
+    <p>
+      The next two times you go to the gas station, fill up your tank
+      completely and record yoru odometer's mileage values. At the second
+      fill-up, record values below and click the "Calculate" button.
+    </p>
+    <form>
+      <div>
+        <label>First Odometer Reading (in miles):</label>
+        <input type="number" id="miles1" min="0" max="400000" step="1" required>
+      </div><br>
+      <div>
+        <label>Second Odometer Reading (in miles):</label>
+        <input type="number" id="miles2" min="0" max="400000" step="1" required>
+      </div><br>
+      <label>Gallons:</label>
+      <input type="number" id="gallons" min="0.1" max="40" step=".1" required>
+      <br><br>
+      <input type="text" id="mpg" size="4" disabled><br><br>
+      <input type="button" value="Calculate" onclick = "calculateMPG(this.form);">
+      <inpute type="reset" value="Reset">
+    </form>
+  </body>

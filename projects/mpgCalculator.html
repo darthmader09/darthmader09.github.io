@@ -54,14 +54,14 @@
     <form>
       <div>
         <label>First Odometer Reading (in miles):</label>
-        <input type="number" id="miles1" min="0" max="400000" step="1" required>
+        <input type="number" id="miles1" name="miles1" min="0" max="400000" step="1" required>
       </div><br>
       <div>
         <label>Second Odometer Reading (in miles):</label>
-        <input type="number" id="miles2" min="0" max="400000" step="1" required>
+        <input type="number" id="miles2" name="miles2" min="0" max="400000" step="1" required>
       </div><br>
       <label>Gallons:</label>
-      <input type="number" id="gallons" min="0.1" max="40" step=".1" required>
+      <input type="number" id="gallons" name="gallons" min="0.1" max="40" step=".1" required>
       <br><br>
       <input type="text" id="mpg" size="4" disabled><br><br>
       <input type="button" value="Calculate" onclick = "calculateMPG(this.form);">

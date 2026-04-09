@@ -5,6 +5,7 @@
     <meta name="author" content="Stephen Speer">
     <title>MPG Calculator</title>
     <script>
+      //This function is being dumb. 
       function calculateMPG(form) {
         var error = "";
         var miles1, miles2;
@@ -16,24 +17,24 @@
         miles2 = form.elements["miles2"];
         gallons = form.elements["gallons"];
 
-        if(!miles.checkValidity()) {
+        if(!miles1.checkValidity()) {
           error += "First  odometer reading must be between 0 and 400,00 miles. \n";
         }
         if(!miles2.checkValidity()) {
-          error += "Second odometer reading must be between 0 and 400,000 miles. \n;
+          error += "Second odometer reading must be between 0 and 400,000 miles. \n";
         }
         if(miles1.checkValidity() && miles2.checkValidity()) {
-          miles1um = miles1.valuesAsNumber;
+          miles1num = miles1.valueAsNumber;
           miles2num = miles2.valueAsNumber;
           if(miles2num <= miles1num) {
           error += "Second odometer reading must be greater than the first. \n;
         }
       }
-      if(!gallons.checkValidity() {
+      if(!gallons.checkValidity()) {
         error += "Gallons must be between 0.1 and 40. \n;
       }
       if(error === "") {
-        mpg = (miles2num - miles1num) / gallon.valueAsNumber;
+        mpg = (miles2num - miles1num) / gallons.valueAsNumber;
         document.getElementById("mpg").value = mpg.toFixed(1);
       }
       else {
@@ -64,6 +65,6 @@
       <br><br>
       <input type="text" id="mpg" size="4" disabled><br><br>
       <input type="button" value="Calculate" onclick = "calculateMPG(this.form);">
-      <inpute type="reset" value="Reset">
+      <input type="reset" value="Reset">
     </form>
   </body>

@@ -18,10 +18,10 @@
         gallons = form.elements["gallons"];
 
         if(!miles1.checkValidity()) {
-          error += "First  odometer reading must be between 0 and 400,00 miles. \n";
+          error += "First  odometer reading must be between 0 and 400,00 miles.\n";
         }
         if(!miles2.checkValidity()) {
-          error += "Second odometer reading must be between 0 and 400,000 miles. \n";
+          error += "Second odometer reading must be between 0 and 400,000 miles.\n";
         }
         if(miles1.checkValidity() && miles2.checkValidity()) {
           miles1num = miles1.valueAsNumber;

@@ -27,11 +27,11 @@
           miles1num = miles1.valueAsNumber;
           miles2num = miles2.valueAsNumber;
           if(miles2num <= miles1num) {
-          error += "Second odometer reading must be greater than the first.\n;
+          error += "Second odometer reading must be greater than the first.\n";
         }
       }
       if(!gallons.checkValidity()) {
-        error += "Gallons must be between 0.1 and 40.\n;
+        error += "Gallons must be between 0.1 and 40.\n";
       }
       if(error === "") {
         mpg = (miles2num - miles1num) / gallons.valueAsNumber;

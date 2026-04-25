@@ -3,18 +3,44 @@
 <head>
 <meta charset="utf-8">
 <meta name="author" content="John Dean">
-<title>Lawrence Microgrid</title>
-<link rel="stylesheet" href="../library/microgrid.css">
+<title>Star Wars Unlimited Beginner's Guide</title>
 <style>
-  h5 {
-    margin: -10px auto 10px;
-    text-align: center;
-  }
-  #page {
-    width: 100%;
-    height: 640px;
-    border: none; 
-  }
+  nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex; /* Arrange items horizontally */
+        gap: 10px; /* Space between buttons */
+    }
+
+    nav li {
+        display: inline; /* Inline list items */
+    }
+
+    nav a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007BFF; /* Button color */
+        color: white;
+        text-decoration: none;
+        border-radius: 5px; /* Rounded corners */
+        border: 2px solid transparent;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    /* Hover effect */
+    nav a:hover {
+        background-color: #0056b3;
+        border-color: #003f7f;
+    }
+
+    /* Active/selected link style */
+    nav a.active {
+        background-color: #28a745;
+        border-color: #1e7e34;
+    }
 </style>
 </head>
 <body>
@@ -22,26 +48,17 @@
   <h1>Microgrid Development in Lawrence KS</h1>
   <nav>
     <ul>
-      <li><a href="electricPowerHistory.html" target="page">
+      <li><a href="swudb.html" target="page">
         Electric Power History</a></li>
-      <li><a href="lawrenceHydropower.html" target="page">
+      <li><a href="forcetable.html" target="page">
         Lawrence Hydropower</a></li>
-      <li><a href="areaDescription.html" target="page">
+      <li><a href="swuCompHub.html" target="page">
         <strong>Area Description</strong></a></li>
-      <li><a href="microgridPossibilities.html" target="page">
+      <li><a href="karabast.html" target="page">
         Microgrid Possibilities</a></li>
-      <li><a href="typicalProperty.html" target="page">
-        Typical Property</a></li>
-      <li><a href="localEnergy.html" target="page">Local Energy</a></li>
-      <li><a href="#">Collector Performance</a></li>
-      <li><a href="#">Electric Power Services</a></li>
-      <li><a href="#">Downtown Properties</a></li>
-      <li><a href="#">Solar Shadowing</a></li>
     </ul>
   </nav>
-  <h5>To bookmark or save content below, open it in a new tab by 
-    right-clicking the corresponding button above.</h5>
 </header>
-<iframe id="page" name="page" src="areaDescription.html"></iframe>
+  
 </body>
 </html>

@@ -5,7 +5,7 @@ img {
 }
 header {
   font-size: 2em;
-  [adding: 10px 0;
+  adding: 10px 0;
   text-align: center;
 }
 .subheader {
@@ -76,3 +76,5 @@ a:hover {text-decoration: under;}
 img {grid-area: banner;}
 nav {grid-area: nav;}
 main {grid-area: main;}
+aside {justify-content: center;
+      display: flex;}

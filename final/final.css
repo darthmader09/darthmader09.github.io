@@ -84,18 +84,28 @@ nav a:hover {
     }
 /* Tablet: 2 columns */
 /* example of responsiveness and fluid layout*/
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px){
         .container {
                 grid-template-columns: repeat(1fr, 1fr);
         }
-        .nav-links {
-            display: flex;
-            flex-direction: row;
-            gap: 15px;
+        .logo {
+            display: none;
+          }
 
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+/* navbar becomes row layout */
+          .navbar {
+            flex-direction: row;
+            justify-content: center; /* centers everything */
+            align-items: center;
+          }
+
+  /* make nav links visible in a row */
+          .nav-links {
+            display: flex !important;
+            flex-direction: row;
+            justify-content: center;
+            width: auto;
+            gap: 15px;
           }
 
   .menu-toggle {
@@ -105,6 +115,10 @@ nav a:hover {
   .nav-links li {
     margin: 0;
   }
+/* make sure buttons don’t stretch */
+  .nav-links a {
+    width: auto;
+  }
 }
 /* desktop 2 columns */
 @media (min-width: 1024px) {
@@ -112,7 +126,20 @@ nav a:hover {
                 grid-template-columns: repeat(1fr, 1fr);
         } 
        .navbar {
-            padding: 1rem 3rem;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          .nav-links {
+            display: flex !important;
+            flex-direction: row;
+            width: auto;
+            gap: 15px;
+          }
+
+          .menu-toggle {
+            display: none;
           }
         }
 ul {

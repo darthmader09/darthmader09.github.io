@@ -2,35 +2,49 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- scales webpage to device width -->
+  <!-- scales webpage to device width -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <title>Star Wars Unlimited Beginner's Guide</title>
+  <!-- link to css page-->
 <link rel="stylesheet" href="../final/final.css">
+  <!-- external link to Poppins font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- example of structural element: header -->
 <header class="center">
+  <!-- example of text element: h1 -->
   <h1>A Beginner's Guide to Star Wars Unlimited</h1>
   </header>
+  <!-- example of block element: horizontal line (hr) -->
   <hr>
 
+    <!-- example of structural element: nav -->
     <nav class="navbar">
+      <!-- example of nested unordered list -->
       <ul class="nav-links">
         <li><a href="swudb.html" target="page">SWUDB</a></li>
         <li><a href="forcetable.html" target="page">ForceTable</a></li>
         <li><a href=""swuCompHub.html" target="page">SWU Compettetive Hub</a></li>
         <li><a href="JS.html" target="page">JavaScript</a></li>
       </ul>
+      <!-- example of block element: div -->
       <div class="menu-toggle">☰</div>
     </nav>
 
   <script src="navScript.js"></script>     
     <div>
+      <!-- example of structural element: main -->
       <main>
       <div class="grid">
-        <div><img src="../final/images/swudbLogo.webp"></div>
+        <!-- example of img element -->
+        <!-- example of img alt text for accessibility -->
+        <div><img src="../final/images/swudbLogo.webp" alt="SWU Database Logo"></div>
+        <!-- example of text/block element: p -->
         <div><p>SWUDB or star wars unlimited database, is a system that allows you to digitally assemble and customize decks with all of the card that exist in the game. It is a valuable tool for looking at combos and preparing a lst of cards to aquire.<br> It also allows players to export their deck list in Json format to a play testing site.</p></div>
-        <div class="black"><img src="../final/images/SWU-Competitve-hub-logo.jpg"></div><div class="black"><p>SWU Competitive Hub is a database of recent winner from significant tournaments. This is a useful tool for people who are looking for a deck they can copy to grab and play.<br> It is also very useful for more experineced players who want to prepare against what is popular for tournaments.</p></div>
-        <div><img src="../final/images/ForceTableLogo.png"></div><div><p>Forcetable is an AI supported algorithm that plays against you in games when you input your deck list. <br>The AI makes very linear and simple moves so it may be easy to defeat, but it can still be good pratice for iunderstanding your deck or the game as a whole.</p></div>
+        <-- sufficient color contrast for accessibility -->
+        <div class="black"><img src="../final/images/SWU-Competitve-hub-logo.jpg" alt="SWU Competitive Hub Logo"></div><div class="black"><p>SWU Competitive Hub is a database of recent winner from significant tournaments. This is a useful tool for people who are looking for a deck they can copy to grab and play.<br> It is also very useful for more experineced players who want to prepare against what is popular for tournaments.</p></div>
+        <div><img src="../final/images/ForceTableLogo.png" alt="Force Table Logo"></div><div><p>Forcetable is an AI supported algorithm that plays against you in games when you input your deck list. <br>The AI makes very linear and simple moves so it may be easy to defeat, but it can still be good pratice for iunderstanding your deck or the game as a whole.</p></div>
         </div>
         </main>
     </div>

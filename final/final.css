@@ -42,8 +42,9 @@ ul {
     }
 
     a {
-        display: inline-block;
+        display: grid;
         padding: 10px 20px;
+        gap: 20px
         background-color: #007BFF; /* Button color */
         color: white;
         text-decoration: none;

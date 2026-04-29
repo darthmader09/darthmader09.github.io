@@ -7,7 +7,7 @@
 /* Tablet: 2 columns */
 @media (min-width: 768px) {
         .container {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(60px, 1fr);
         }
 /* desktop 3 columns */
 @media (min-width: 1024px) {

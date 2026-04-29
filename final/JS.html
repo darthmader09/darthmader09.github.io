@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple JS Example</title>
+</head>
+<body>
+
+  <h2>Add Numbers</h2>
+
+  <!-- FORM -->
+  <form id="numberForm">
+    Enter numbers (comma separated):<br>
+    <input type="text" id="numbers" placeholder="e.g. 1,2,3,4">
+    <br><br>
+    <button type="submit">Calculate Sum</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    // EVENT HANDLER
+    document.getElementById("numberForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // stop form from refreshing page
+      calculateSum();
+    });
+
+    // FUNCTION
+    function calculateSum() {
+      let input = document.getElementById("numbers").value;
+      let nums = input.split(",");
+
+      let sum = 0;
+
+      // LOOP
+      for (let i = 0; i < nums.length; i++) {
+        sum += Number(nums[i]);
+      }
+
+      document.getElementById("result").textContent = "Sum: " + sum;
+    }
+  </script>
+
+</body>
+</html>
+</body>
+</html>

@@ -33,8 +33,23 @@
   <script defer src="navScript.js"></script> 
   <main>
     <h1>Win tracker.</h1>
-    <table>
-      <tr><th>Color</th><th>Archetype</th><th>Wins</th><th>Games played.</th></tr>
-      <tr><td><input></td><td><input></td><td><input id="wins" type="number" step="1"></td><td><input id="total" type="number" step="1"></td></tr>
-    </table>
+   <form>
+     Color
+     <input type="checkbox" name="color" value="Red">Red<br>
+     <input type="checkbox" name="color" value="Yellow">Yellow<br>
+     <input type="checkbox" name="color" value="Green">Green<br>
+     <input type="checkbox" name="color" value="Blue">Blue<br>
+     <input type="checkbox" name="color" value="Hero">Hero<br>
+     <input type="checkbox" name="color" value="Villain">Villain<br>
+     Archetype<br>
+     <input type="radio" name="archetype"value="Aggressive">Aggressive &nbsp;
+     <input type="radio" name="archetype"value="Midrange">Midrange &nbsp;
+     <input type="radio" name="archetype"value="Control">Control &nbsp;
+     Wins
+     <input type="number" name="wins" step="1">
+     Total Games
+     <input type="number" name="total" step="1">
+   </form>
   </main>
+</body>
+</html>

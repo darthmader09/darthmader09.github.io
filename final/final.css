@@ -6,7 +6,7 @@
 }
 .navbar {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
 }
 /* Tablet: 2 columns */
 @media (min-width: 768px) {
@@ -16,11 +16,12 @@
         .navbar {
         display: flex;
         flex-direction: column;
+        backgroud-color; navy;
 }
 /* desktop 3 columns */
 @media (min-width: 1024px) {
         .container {
-                grid-template-columns: repeat(60px, 1fr 1fr);
+                grid-template-columns: repeat(60px, 1fr);
         } 
         .navbar {
         display: flex;

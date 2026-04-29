@@ -46,7 +46,7 @@ ul {
         gap: 20px;}
 .container {
         display: grid;
-        grid-template-columns: auto auto
+        grid-template-columns: auto auto;
         padding: 5px;
         gap: 5px;
 }

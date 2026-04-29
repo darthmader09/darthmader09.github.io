@@ -34,21 +34,21 @@
   <main>
     <h1>Win tracker.</h1>
    <form>
-     <legend></legend>Color</legend>
-     <input type="checkbox" name="color" value="Red">Red<br>
-     <input type="checkbox" name="color" value="Yellow">Yellow<br>
-     <input type="checkbox" name="color" value="Green">Green<br>
-     <input type="checkbox" name="color" value="Blue">Blue<br>
-     <input type="checkbox" name="color" value="Hero">Hero<br>
-     <input type="checkbox" name="color" value="Villain">Villain<br>
+     <legend>Color</legend>
+     <label><input type="checkbox" name="color" value="Red">Red</label><br> <!-- labels for accessibility -->
+     <label><input type="checkbox" name="color" value="Yellow">Yellow</label><br>
+     <label><input type="checkbox" name="color" value="Green">Green</label><br>
+     <label><input type="checkbox" name="color" value="Blue">Blue</label><br>
+     <label><input type="checkbox" name="color" value="Hero">Hero</label><br>
+     <label><input type="checkbox" name="color" value="Villain">Villain</label><br>
      <legend>Archetype</legend>
-     <input type="radio" name="archetype"value="Aggressive">Aggressive &nbsp;
-     <input type="radio" name="archetype"value="Midrange">Midrange &nbsp;
-     <input type="radio" name="archetype"value="Control">Control &nbsp;
+     <label><input type="radio" name="archetype"value="Aggressive">Aggressive </label>&nbsp;
+     <label><input type="radio" name="archetype"value="Midrange">Midrange </label>&nbsp;
+     <label><input type="radio" name="archetype"value="Control">Control </label>&nbsp;
      <legend>Wins</legend>
-     <input type="number" name="wins" step="1">
-     <<legend>Total Games</legend>
-     <input type="number" name="total" step="1">
+     <label><input type="number" name="wins" step="1"></label>
+     <legend>Total Games</legend>
+     <label><input type="number" name="total" step="1"></label>
    </form>
   </main>
 </body>

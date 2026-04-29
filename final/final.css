@@ -4,6 +4,8 @@
         grid-template-columns: 1fr; /* single column layout */
         gap: 1rem;
 }
+
+  
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -13,7 +15,13 @@ background-color: #0056b3; /* Button color */
 color: white;
 font-family: Arial, sans-serif;
 }
-
+.navbar a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
 .nav-links {
   display: none;
   flex-direction: column;
@@ -31,6 +39,29 @@ font-family: Arial, sans-serif;
 .nav-links.active {
   display: flex;
 }
+.nav a {
+        display: grid;
+        padding: 10px 20px;
+        gap: 20px
+        background-color: #0056b3; /* Button color */
+        color: white;
+        text-decoration: none;
+        border-radius: 5px; /* Rounded corners */
+        border: 2px solid transparent;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+/* Active/selected link style */
+    nav a.active {
+        background-color: #28a745;
+        border-color: #1e7e34;
+    }
+    /* Hover effect */
+    nav a:hover {
+        background-color: #0056b3;
+        border-color: #003f7f;
+    }
 /* Tablet: 2 columns */
 @media (min-width: 768px) {
         .container {
@@ -47,10 +78,10 @@ font-family: Arial, sans-serif;
             display: none;
           }
 }
-/* desktop 3 columns */
+/* desktop 2 columns */
 @media (min-width: 1024px) {
         .container {
-                grid-template-columns: repeat(30px, 1fr);
+                grid-template-columns: repeat(1fr, 1fr);
         } 
         .navbar {
     padding: 1rem 3rem;

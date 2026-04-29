@@ -21,7 +21,7 @@
 /* desktop 3 columns */
 @media (min-width: 1024px) {
         .container {
-                grid-template-columns: repeat(60px, 1fr);
+                grid-template-columns: repeat(30px, 1fr);
         } 
         .navbar {
         display: flex;
@@ -45,7 +45,7 @@ ul {
         display: grid;
         padding: 10px 20px;
         gap: 20px
-        background-color: #007BFF; /* Button color */
+        background-color: #0056b3; /* Button color */
         color: white;
         text-decoration: none;
         border-radius: 5px; /* Rounded corners */

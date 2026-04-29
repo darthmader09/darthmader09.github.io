@@ -1,3 +1,21 @@
+/* Base syles for mobile */
+.container {
+        display: grid;
+        grid-template-columns: 1fr; /* single column layout */
+        gap: 1rem;
+}
+/* Tablet: 2 columns */
+@media (min-width: 768px) {
+        .container {
+                grid-template-columns: repeat(2, 1fr);
+        }
+/* desktop 3 columns */
+@media (min-width: 1024px) {
+        .container {
+                grid-template-columns: repeat(60px, 1fr 1fr);
+        } 
+        
+}
 ul {
         list-style: none;
         padding: 0;
@@ -40,7 +58,6 @@ ul {
   .center {display: flex;
           align-items: center;
           justify-content: space-between;}
-@media screen and (min-width: 481px) {
   .grid {display: grid;
          grid-template-columns: 1fr 2fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -52,19 +69,7 @@ ul {
         grid-template-columns: 1fr 1fr;
         padding: 5px;
         gap: 5px;
-} }
-@media screen and (max-width: 480px) {
-  .grid {display: grid;
-         grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 20px
-        }
-.container {
-        display: grid;
-        grid-template-columns: 1fr;
-        padding: 5px;
-        gap: 5px;
-} }
+}
 .container div {
         text-align: center;
 }

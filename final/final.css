@@ -71,17 +71,9 @@ ul {
     }
 
     a {
-        display: grid;
-        padding: 10px 20px;
-        gap: 20px
-        background-color: #0056b3; /* Button color */
-        color: white;
-        text-decoration: none;
-        border-radius: 5px; /* Rounded corners */
-        border: 2px solid transparent;
+       
         font-family: Arial, sans-serif;
-        font-size: 16px;
-        transition: background-color 0.3s, border-color 0.3s;
+        
     }
 
     /* Hover effect */

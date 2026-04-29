@@ -176,6 +176,7 @@ ul {
     }
   header {
     background-color: darkblue;
+    font-family: 'Poppins', sans-serif;
     color: white;}
   .center {display: flex;
           align-items: center;

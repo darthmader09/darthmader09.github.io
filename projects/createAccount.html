@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Create Account</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    label {
+        display: inline-block;
+        width: 160px;
+        margin-bottom: 8px;
+    }
+
+    input, select {
+        padding: 5px;
+        margin-bottom: 8px;
+        width: 220px;
+    }
+
+    select {
+        height: 120px;
+    }
+
+    /* Invalid = pink */
+    input:invalid, select:invalid {
+        background-color: #f8c8c8;
+    }
+
+    /* Valid = green */
+    input:valid, select:valid {
+        background-color: #c8f8c8;
+    }
+
+    #output {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Create an Account</h1>
+<p>
+All fields are required. Enter appropriate values in the text boxes.
+Select one or more security questions. Then click the Done button
+to review your choices.
+</p>
+
+<form id="form">
+
+    <div>
+        <label for="name">Full name:</label>
+        <input type="text" id="name" required>
+    </div>
+
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+    </div>
+
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+    </div>
+
+    <div>
+        <label for="email">Email address:</label>
+        <input type="email" id="email" required>
+    </div>
+
+    <div>
+        <label for="phone">Phone number:</label>
+        <input type="text" id="phone"
+               placeholder="123-456-7890"
+               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+               required>
+    </div>
+
+    <div>
+        <label for="questions">Security questions:</label>
+        <select id="questions" multiple required>
+            <option>At what age did your childhood pet run away?</option>
+            <option>What was the name of your favorite unpaid internship?</option>
+            <option>What is the maiden name of your best friend's maternal grandmother?</option>
+            <option>What is the name of your favorite canceled TV show?</option>
+            <option>On what street did you lose your childlike sense of wonder?</option>
+            <option>What are you wearing?</option>
+            <option>What sports team do you fetishize to avoid meaningful discussion with others?</option>
+            <option>In what year did you stop trying?</option>
+        </select>
+    </div>
+
+    <button type="button" onclick="processForm()">Done</button>
+    <button type="reset">Reset</button>
+
+</form>
+
+<div id="output"></div>
+
+<script>
+function processForm() {
+    const form = document.getElementById("form");
+    const output = document.getElementById("output");
+
+    // Check validity
+    if (!form.checkValidity()) {
+        output.innerHTML = "Please correct invalid or empty fields.";
+        return;
+    }
+
+    // Get values
+    const name = document.getElementById("name").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+
+    const questionsSelect = document.getElementById("questions");
+    const selectedQuestions = Array.from(questionsSelect.selectedOptions)
+                                   .map(opt => opt.text);
+
+    // Build output
+    let html = "<h3>Review your entries:</h3>";
+    html += "Name: " + name + "<br>";
+    html += "Username: " + username + "<br>";
+    html += "Password: " + password + "<br>";
+    html += "Email address: " + email + "<br>";
+    html += "Phone number: " + phone + "<br><br>";
+
+    html += "<strong>Security questions:</strong><br>";
+    selectedQuestions.forEach(q => {
+        html += q + "<br>";
+    });
+
+    output.innerHTML = html;
+}
+</script>
+
+</body>
+</html>

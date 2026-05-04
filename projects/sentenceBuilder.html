@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentence Builder</title>
+
+    <style>
+        /* Custom cursive font */
+        @font-face {
+            font-family: "MyCursive";
+            src: url("fonts/mycursive.woff") format("woff"),
+                 url("fonts/mycursive.ttf") format("truetype");
+        }
+
+        body {
+            font-family: serif;
+            margin: 40px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        #sentence {
+            margin-top: 20px;
+            font-size: 28px;       /* largish */
+            color: #cc4444;        /* reddish */
+            font-family: "MyCursive", cursive;
+        }
+
+        button {
+            margin-top: 10px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body onload="init();">
+
+<noscript>
+    <p style="color:red; font-weight:bold;">
+        This page requires JavaScript to function properly.
+    </p>
+</noscript>
+
+<h1>Sentence Builder</h1>
+
+<form onsubmit="return false;">
+    <label id="prompt">Starting word for your sentence:</label>
+    <input type="text" id="wordBox">
+
+    <br>
+
+    <button type="button" onclick="addWord()">Add Word</button>
+    <button type="button" onclick="startOver()">Start Over</button>
+</form>
+
+<div id="sentence"></div>
+
+<script>
+    // Local variable to store the sentence
+    let sentence = "";
+
+    function init() {
+        document.getElementById("wordBox").focus();
+    }
+
+    function addWord() {
+        let input = document.getElementById("wordBox");
+        let word = input.value;
+
+        if (sentence === "") {
+            sentence = word;
+            document.getElementById("prompt").textContent =
+                "Next word for your sentence:";
+        } else {
+            sentence += " " + word;
+        }
+
+        document.getElementById("sentence").textContent = sentence;
+
+        input.value = "";
+        input.focus();
+    }
+
+    function startOver() {
+        sentence = "";
+
+        document.getElementById("sentence").textContent = "";
+        document.getElementById("prompt").textContent =
+            "Starting word for your sentence:";
+
+        let input = document.getElementById("wordBox");
+        input.value = "";
+        input.focus();
+    }
+</script>
+
+</body>
+</html>
